@@ -4,6 +4,11 @@ import { v } from 'convex/values'
 
 const schema = defineSchema({
   ...authTables,
+  workspaces: defineTable({
+    name: v.string(),
+    userId: v.id('user'),
+    joinCode: v.string(),
+  }),
 })
 
 export default schema
